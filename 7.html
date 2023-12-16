@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #semesterFields {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Percentage Calculator</h1>
+
+    <form id="percentageForm">
+        <label for="semesters">How many semesters have you appeared so far?</label>
+        <input type="number" id="semesters" name="semesters" min="1" max="8" required>
+
+        <div id="semesterFields"></div>
+
+        <button type="button" onclick="calculatePercentage()">Calculate Percentage</button>
+
+        <p id="resultMessage"></p>
+    </form>
+
+    <script>
+        function generateSemesterFields(numSemesters) {
+            var semesterFieldsContainer = document.getElementById('semesterFields');
+            semesterFieldsContainer.innerHTML = ''; // Clear previous fields
+
+            for (var i = 1; i <= numSemesters; i++) {
+                var label = document.createElement('label');
+                label.textContent = `Enter marks for Semester ${i}:`;
+
+                var input = document.createElement('input');
+                input.type = 'number';
+                input.min = '0';
+                input.max = '100';
+                input.placeholder = 'Marks for Semester ' + i;
+                input.required = true;
+
+                semesterFieldsContainer.appendChild(label);
+                semesterFieldsContainer.appendChild(input);
+            }
+
+            semesterFieldsContainer.style.display = 'block';
+        }
+
+        function calculatePercentage() {
+            var numSemesters = document.getElementById('semesters').value;
+            var semesterFields = document.querySelectorAll('#semesterFields input');
+
+            var totalMarks = numSemesters * 100;
+            var obtainedMarks = 0;
+
+            semesterFields.forEach(function (input) {
+                obtainedMarks += parseFloat(input.value) || 0;
+            });
+
+            var percentage = (obtainedMarks / totalMarks) * 100;
+
+            var resultMessage = `Obtained Percentage: ${percentage.toFixed(2)}%`;
+            document.getElementById('resultMessage').textContent = resultMessage;
+        }
+
+        document.getElementById('semesters').addEventListener('input', function () {
+            var numSemesters = this.value;
+            generateSemesterFields(numSemesters);
+        });
+    </script>
+
+</body>
+</html>

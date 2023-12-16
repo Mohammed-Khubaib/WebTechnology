@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        #calculator {
+            width: 300px;
+            background-color: #008CBA;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        #display {
+            width: 100%;
+            height: 60px;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 1.5em;
+            border: none;
+            outline: none;
+            text-align: right;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        button {
+            width: 25%;
+            height: 50px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        button:active {
+            background-color: #45a049;
+        }
+
+        button.operator {
+            background-color: #008CBA;
+        }
+
+        button.operator:active {
+            background-color: #007097;
+        }
+        button.clear {
+            background-color: #ba1f00;
+        }
+
+        button.double {
+            width: 50%;
+        }
+
+        button.doubleZero {
+            width: 50%;
+            height: 50px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="calculator">
+        <input type="text" id="display" readonly>
+        <div class="row">
+            <button class="clear"onclick="clearDisplay()">C</button>
+            <button class="operator" onclick="appendToDisplay('/')">/</button>
+            <button class="operator" onclick="appendToDisplay('*')">*</button>
+        </div>
+        <div class="row">
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button class="operator" onclick="appendToDisplay('-')">-</button>
+        </div>
+        <div class="row">
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button class="operator" onclick="appendToDisplay('+')">+</button>
+        </div>
+        <div class="row">
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button class="operator" onclick="calculateResult()">=</button>
+        </div>
+        <div class="row">
+            <button doubleZero onclick="appendToDisplay('00')">00</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+        </div>
+    </div>
+
+    <script>
+        function appendToDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function calculateResult() {
+            var expression = document.getElementById('display').value;
+
+            try {
+                var result = eval(expression);
+                document.getElementById('display').value = result;
+            } catch (error) {
+                document.getElementById('display').value = 'Error';
+            }
+        }
+    </script>
+
+</body>
+</html>
