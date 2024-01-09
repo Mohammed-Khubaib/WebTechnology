@@ -33,19 +33,19 @@
 
 14. **[Create a Node.js File that Reads the HTML File and Returns the Content](./14.js)**
 
-15. **[Create an application to demonstrate routing in Express.js Framework](./15_Server.js)
+15. **[Create an application to demonstrate routing in Express.js Framework](./15_Server.js)**
 
-16. Create an application to handle different types of http request and response in Express.js Framework
-    - **[GET](./16_GET.js)
-    - **[index.html](./index.html)
+16. Create an application to handle different types of http request and response in Express.js Framework**
+    - **[GET](./16_GET.js)**
+    - **[index.html](./index.html)**
 
-17. **[Implement Node.js - RESTful API for listing the details of a user from JSON file](./17ListUsers.js)
+17. **[Implement Node.js - RESTful API for listing the details of a user from JSON file](./17ListUsers.js)**
 
-18. **[Implement Node.js - RESTful API for adding new user details from JSON file](./18AddUser.js)
+18. **[Implement Node.js - RESTful API for adding new user details from JSON file](./18AddUser.js)**
 
-19. **[Implement Node.js - RESTful API for fetching details of a specific user from JSON file](./19ShowUser.js)
+19. **[Implement Node.js - RESTful API for fetching details of a specific user from JSON file](./19ShowUser.js)**
 
-20. **[Implement Node.js - RESTful API for deleting user details from JSON file](./20DeleteUser.js)
+20. **[Implement Node.js - RESTful API for deleting user details from JSON file](./20DeleteUser.js)**
 ---
 ## Running the JavaScript Files
 
