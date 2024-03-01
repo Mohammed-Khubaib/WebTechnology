@@ -22,9 +22,13 @@ app.get('/ab*cd',function(req, res){
     res.send('Page Pattern Match')
 });
 
-var server = app.listen(8080,function(){
-    var host = server.address().address
-    var port = server.address().port
+var server = app.listen(8080, '127.0.0.1', function () {
+    var host = server.address().address;
+    var port = server.address().port;
 
-    console.log("Example app listening at http://%s:%s",host,port)
-})
+    console.log("Example app listening at http://%s:%s/", host, port);
+    console.log("List User at http://%s:%s/list_users", host, port);
+    console.log("Delete User at http://%s:%s/del_user", host, port);
+    console.log("Pattern Match : http://%s:%s/abcd", host, port);
+});
+

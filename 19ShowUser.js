@@ -10,9 +10,11 @@ app.get('/:id', function (req, res) {
         res.end( JSON.stringify(user));
     });
 })
-var server = app.listen(8081, function () {
-    var host = server.address().address
-    var port = server.address().port
+var server = app.listen(8080, '127.0.0.1', function () {
+    var host = server.address().address;
+    var port = server.address().port;
 
-    console.log("Example app listening at http://%s:%s", host, port)
+    console.log("Example app listening at http://%s:%s/1", host, port)
+    console.log("Example app listening at http://%s:%s/2", host, port)
+    console.log("Example app listening at http://%s:%s/3", host, port)
 })
