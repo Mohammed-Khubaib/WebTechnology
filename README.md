@@ -46,10 +46,14 @@
 19. **[Implement Node.js - RESTful API for fetching details of a specific user from JSON file](./19ShowUser.js)**
 
 20. **[Implement Node.js - RESTful API for deleting user details from JSON file](./20DeleteUser.js)**
+21. **[Develop a React JS App for rendering HTML in a web page](./react-app/src/21.js)**
+22. **[Build A React app for Rendering a Component](./react-app/src/22.js)**
+23. **[Build a React JS App for Adding Forms in React](./react-app/src/23.js)**
+24. **[Develop React JS App for styling React with CSS](./react-app/src/24.js)**
 ---
-## Running the JavaScript Files
+## Executing the JavaScript program
 
-To execute the JavaScript files, use the following commands in the terminal:
+To execute the JavaScript code, use the following commands in the terminal:
 
 ```bash
 node file_name.js
@@ -58,3 +62,22 @@ or
 ```bash
 node file_name
 ```
+
+## Executing the React code:
+To execute the React code, use the following commands in the terminal:
+1. Create a new React Project
+    ```bash
+        npx create-react-app my-app
+    ```
+2. Navigate to the Project Directory:
+    ```bash
+        cd my-app
+    ```
+> ⚠️ Delete all the files within the `src/` folder and add your React code:
+3. Start the Development Server:
+   ```bash
+       npm start
+   ```
+
+
+
