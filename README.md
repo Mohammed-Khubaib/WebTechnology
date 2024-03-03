@@ -74,7 +74,7 @@ To execute the React code, use the following commands in the terminal:
     ```
 2. Navigate to the Project Directory:
     ```bash
-        cd my-app
+        cd ./my-app/scr
     ```
 > ⚠️ Delete all the files within the `src/` folder and add your React code:
 3. Start the Development Server:
