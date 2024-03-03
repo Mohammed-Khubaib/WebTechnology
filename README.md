@@ -50,6 +50,9 @@
 22. **[Build A React app for Rendering a Component](./react-app/src/22.js)**
 23. **[Build a React JS App for Adding Forms in React](./react-app/src/23.js)**
 24. **[Develop React JS App for styling React with CSS](./react-app/src/24.js)**
+25. **[Write a program to insert documents into a MongoDB database](./25.js)**
+26. **[Write a program to Update the document, but if not found insert it](./26.js)**
+
 ---
 ## Executing the JavaScript program
 
