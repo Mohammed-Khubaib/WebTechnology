@@ -65,7 +65,16 @@ or
 ```bash
 node file_name
 ```
-
+> ⚠️ for deleting user details from JSON file open two terminals
+    - in one terminal 
+        ```bash
+        node file_name.js
+        ```
+    - inanother terminal
+        ```bash
+        curl -X DELETE http://localhost:8080/deleteUser/2
+        ```
+    > you can change the id at the very end
 ## Executing the React code:
 To execute the React code, use the following commands in the terminal:
 1. Create a new React Project
