@@ -35,7 +35,7 @@
 
 15. **[Create an application to demonstrate routing in Express.js Framework](./15_Server.js)**
 
-16. Create an application to handle different types of http request and response in Express.js Framework**
+16. **Create an application to handle different types of http request and response in Express.js Framework**
     - **[GET](./16_GET.js)**
     - **[index.html](./index.html)**
 
