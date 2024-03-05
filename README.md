@@ -88,6 +88,10 @@ To execute the React code, use the following commands in the terminal:
     ```
 > ⚠️ Delete all the files within the `src/` folder and add your React code:
 
+```bash
+    rm *.js *.css *.svg
+```
+
 > ⚠️ Also Note that the Js file you add should be named index.js:
 3. Start the Development Server:
    ```bash
